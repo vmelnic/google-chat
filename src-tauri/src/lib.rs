@@ -1,4 +1,4 @@
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 
 use tauri::{
     image::Image,
@@ -29,7 +29,7 @@ fn filename_from_url(url: &str) -> String {
         .unwrap_or_else(|| "download".to_string())
 }
 
-fn unique_path(dir: &PathBuf, filename: &str) -> PathBuf {
+fn unique_path(dir: &Path, filename: &str) -> PathBuf {
     let path = dir.join(filename);
     if !path.exists() {
         return path;
@@ -218,6 +218,7 @@ pub fn run() {
         .build(tauri::generate_context!())
         .expect("error while building tauri application")
         .run(|app, event| match &event {
+            #[cfg(target_os = "macos")]
             RunEvent::Reopen { .. } => {
                 if let Some(w) = app.get_webview_window("main") {
                     let _ = w.show();
