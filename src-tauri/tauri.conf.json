@@ -8,18 +8,7 @@
   },
   "app": {
     "withGlobalTauri": true,
-    "windows": [
-      {
-        "title": "Google Chat",
-        "width": 1200,
-        "height": 800,
-        "minWidth": 600,
-        "minHeight": 400,
-        "url": "index.html",
-        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        "decorations": true
-      }
-    ],
+    "windows": [],
     "security": {
       "csp": "default-src 'self' https://chat.google.com https://*.google.com https://*.googleapis.com https://*.gstatic.com https://*.googleusercontent.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.googleapis.com https://*.gstatic.com; style-src 'self' 'unsafe-inline' https://*.google.com https://*.googleapis.com https://*.gstatic.com; img-src 'self' data: blob: https:; font-src 'self' data: https://*.gstatic.com https://*.googleapis.com; connect-src 'self' https: wss:; frame-src 'self' https://*.google.com; media-src 'self' blob: https:"
     }

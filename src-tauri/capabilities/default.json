@@ -3,6 +3,9 @@
   "identifier": "default",
   "description": "Capability for the main window",
   "windows": ["main"],
+  "remote": {
+    "urls": ["https://*.google.com/*", "https://*.googleapis.com/*"]
+  },
   "permissions": [
     "core:default",
     "opener:default",
